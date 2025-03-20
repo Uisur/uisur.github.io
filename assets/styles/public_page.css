@@ -1,0 +1,191 @@
+.friend-links {
+  margin-top:5px;
+  margin-bottom: 10px;
+}
+.friend-links a {
+    margin: 0 10px;
+    color: #666;
+    text-decoration: none;
+    padding: 4px 8px;  /* 添加内边距 */
+    border-radius: 4px;  /* 添加圆角 */
+    transition: background-color 0.3s;  /* 添加过渡动画 */
+}
+.friend-links a:hover {
+    background-color: #f5f5f5;  /* 添加悬停时的背景色 */
+}
+.beian {
+    color: #999;
+    font-size: 14px;
+}
+.footer {
+  box-shadow: 0.1em 0.1em 0.6em rgba(0, 0, 0, 0.1);
+    height: 60px;
+    background-color:#fff;
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    backdrop-filter: blur(100px) saturate(180%);
+    -webkit-backdrop-filter: blur(100px) saturate(180%);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease; /* 添加过渡动画 */
+}
+.custom-alert {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-left: 5px solid #E6A23C; /* Change color based on type */
+    background-color: #F4F4F5;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-shadow: 0.1em 0.1em 0.6em rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-alert--info {
+    border-color: #909399; /* Info color */
+  }
+  
+  .custom-alert__icon {
+    font-size: 20px;
+    color: #909399;
+    margin-right: 8px;
+  }
+  
+  .custom-alert__title {
+    font-size: 16px;
+    color: #303133;
+    margin: 0;
+  }
+  
+  .custom-alert__description {
+    font-size: 14px;
+    color: #606266;
+    margin: 4px 0 0;
+  }
+
+  a {
+    color: #0078d4; /* el 风格的主色调 */
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* 鼠标悬停效果 */
+a:hover {
+    color: #005a9e; /* 悬停时颜色变深 */
+}
+
+/* 下划线动画 */
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #0078d4;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* 点击效果 */
+a:active {
+    color: #004578; /* 点击时颜色更深 */
+}
+
+a:active::after {
+    background-color: #004578;
+}
+.el-button {
+  background-color: #0078d4; /* el 风格的主色调 */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px; /* 圆角 */
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 微妙的阴影 */
+}
+
+/* 鼠标悬停效果 */
+.el-button:hover {
+  background-color: #005a9e; /* 悬停时颜色变深 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影加深 */
+}
+
+/* 点击效果 */
+.el-button:active {
+  background-color: #004578; /* 点击时颜色更深 */
+  transform: scale(0.98); /* 轻微缩小 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影恢复 */
+}
+
+/* 禁用状态 */
+.el-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.el-button--primary {
+  background-color: white; /* 白色填充 */
+  border: 2px solid #0078d4; /* 蓝色边框 */
+  color: #0078d4; /* 蓝色字体 */
+  padding: 10px 22px; /* 调整内边距以适应边框 */
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 鼠标悬停效果 */
+.el-button--primary:hover {
+  background-color: #e1f0ff; /* 浅蓝色填充 */
+  color: #0078d4; /* 保持蓝色字体 */
+}
+
+/* 点击效果 */
+.el-button--primary:active {
+  background-color: #cce4ff; /* 更深的浅蓝色填充 */
+  border-color: #005a9e; /* 更深的蓝色边框 */
+  color: #005a9e; /* 更深的蓝色字体 */
+}
+
+/* 禁用状态 */
+.el-button--primary:disabled {
+  background-color: #f5f5f5; /* 灰色填充 */
+  border-color: #d9d9d9; /* 灰色边框 */
+  color: #bfbfbf; /* 灰色字体 */
+  cursor: not-allowed;
+}
+.el-input {
+  width: 100%;
+}
+
+.el-input__inner {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.el-input__inner:focus {
+  border-color: #409EFF;
+  box-shadow: 0 0 8px rgba(64, 158, 255, 0.6);
+}
+
+.el-input__inner::placeholder {
+  color: #999;
+}

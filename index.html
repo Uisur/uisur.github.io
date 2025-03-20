@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uisur Studio | 维瑟智创</title>
+    <!-- 引入 Vue.js -->
+    <script src="assets/vue.min.js"></script>
+    <!-- 引入 Element UI 样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入 Element UI 脚本 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <!-- 引入自定义样式 -->
+    <link rel="stylesheet" href="assets/styles/index.css">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <!-- 网站图标 -->
+    <link rel="icon" type="image/png" href="./assets/images/Uisur_Icon1.jpg">
+</head>
+<body>
+    <div id="app">
+        <!-- 头部 -->
+        <header :class="['header', {'header-blur': !isTop}]">
+            <div class="logo">
+                <img src="./assets/images/Uisur_Icon1.jpg" alt="ByteWise Logo" class="logo-icon">
+                Uisur Studio
+            </div>
+            <!-- 导航菜单 -->
+            <nav class="nav-menu">
+                <div 
+                    v-for="(item, index) in navItems" 
+                    :key="index"
+                    :class="['nav-item', {active: currentPage === item.path}]"
+                    @click="changePage(item.path)"
+                >
+                    {{ item.name }}
+                </div>
+            </nav>
+        </header>
+
+        <!-- 主体内容 -->
+        <main class="main-content">
+            <iframe 
+                ref="pageIframe" 
+                :src="currentPageUrl" 
+                class="page-iframe"
+                frameborder="0"
+            ></iframe>
+        </main>
+
+        <!-- Element UI 对话框 -->
+        <el-dialog
+            :visible.sync="dialogVisible"
+            title="确认访问"
+            width="30%">
+            <span>是否访问 "{{targetUrl}}"？</span>
+            <span slot="footer" class="dialog-footer">
+                <el-button @click="dialogVisible = false">取消</el-button>
+                <el-button type="primary" @click="confirmNavigation">确认</el-button>
+            </span>
+        </el-dialog>
+    </div>
+
+    <!-- 引入自定义脚本 -->
+    <script src="assets/scripts/index.js"></script>
+</body>
+</html>
